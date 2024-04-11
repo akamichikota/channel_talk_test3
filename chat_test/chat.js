@@ -49,13 +49,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Channel.ioのbootメソッドを呼び出し
         ChannelIO('boot', {
-            pluginKey: 'mypluginKey', // 実際のプラグインキーに置き換えてください
-            firstMessage: firstMessage,
+            pluginKey: 'mypluginKey', // 実際のプラグインキーに置き換えてください          
             memberId: memberId,
             profile: {
                 name: name,
                 email: email,
-                
+                firstMessage: firstMessage,
             }
         }, function onBoot(error, user) {
             if (error) {
