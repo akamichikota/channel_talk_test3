@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Channel.ioのbootメソッドを呼び出し
         ChannelIO('boot', {
-            pluginKey: '748abef7-08de-4b43-a36d-6784199afd77', // 実際のプラグインキーに置き換えてください
+            pluginKey: 'mypluginKey', // 実際のプラグインキーに置き換えてください
             firstMessage: firstMessage,
             memberId: memberId,
             profile: {
@@ -81,7 +81,6 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(data => {
                 if (!data.error) {
                     console.log('Chat session created and message sent successfully:', data);
-                    // ここで、チャットウィンドウを開くなど、ユーザーに対するフィードバックを提供できます
                     ChannelIO('openChat', undefined, '');
                 } else {
                     console.error('Error:', data.message || 'Failed to start chat session');
